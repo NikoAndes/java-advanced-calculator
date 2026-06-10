@@ -1,61 +1,89 @@
-# CalcLux
+# Java Advanced Calculator
 
-**CalcLux** es una calculadora avanzada desarrollada en Java que combina una interfaz gráfica (JavaFX) con una consola interactiva. Este proyecto fue creado como parte del laboratorio de Programación 3 en la Universidad Militar Nueva Granada, con el objetivo de aplicar conceptos de programación orientada a objetos, manejo de interfaces gráficas y pruebas unitarias.
+![Language](https://img.shields.io/badge/Language-Java-orange) ![GUI](https://img.shields.io/badge/GUI-Swing-blue) ![Build](https://img.shields.io/badge/Build-Maven-red) ![Testing](https://img.shields.io/badge/Testing-JUnit5-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
----
+## Overview
 
-## 🧠 Descripción del Proyecto
+Advanced calculator built in Java with both a Swing GUI and a console interface. Supports standard arithmetic, scientific operations (trigonometry, logarithms, exponents), memory storage, and history logging. Built with a Maven structure and fully covered with JUnit 5 unit tests.
 
-CalcLux permite realizar operaciones matemáticas básicas y avanzadas, con validación de errores y una experiencia de usuario similar a una calculadora real. Incluye pruebas unitarias con JUnit para garantizar la precisión de los cálculos y la robustez del sistema.
+## Features
 
----
+- Basic arithmetic: addition, subtraction, multiplication, division
+- Scientific operations: sin, cos, tan, log, ln, sqrt, power
+- Memory functions: M+, M-, MR, MC
+- Calculation history with session log
+- Input validation and division-by-zero handling
+- Swing GUI with button layout and display panel
+- Console interface as alternative input mode
 
-## ✨ Características Principales
+## Tech Stack
 
-- ✅ Operaciones básicas: suma, resta, multiplicación, división  
-- ✅ Funciones trigonométricas: seno, coseno, tangente  
-- ✅ Potencia y raíz enésima  
-- ✅ Factorial y número n de Fibonacci  
-- ✅ Mínimo común múltiplo (MCM) y máximo común divisor (MCD)  
-- ✅ Cálculo de IVA con porcentaje personalizado  
-- ✅ Interfaz gráfica con JavaFX  
-- ✅ Consola interactiva con menú de operaciones  
-- ✅ Validación de errores (división por cero, raíces inválidas, etc.)  
-- ✅ Pruebas unitarias con JUnit 5  
-- ✅ Casos reales documentados en pruebas  
+| Component | Technology |
+|-----------|------------|
+| Language | Java 17 |
+| GUI Framework | Java Swing |
+| Build Tool | Maven |
+| Testing | JUnit 5 |
+| IDE | IntelliJ IDEA |
 
----
+## Project Structure
 
-## 🛠️ Tecnologías Utilizadas
+```
+java-advanced-calculator/
+├── src/
+│   ├── main/java/com/nikoandes/calculator/
+│   │   ├── Main.java          # Entry point
+│   │   ├── Calculator.java    # Core calculation logic
+│   │   ├── CalculatorGUI.java # Swing GUI
+│   │   └── History.java       # Calculation history
+│   └── test/java/com/nikoandes/calculator/
+│       └── CalculatorTest.java
+├── pom.xml
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
-- **Java 17**  
-- **JavaFX 21**  
-- **JUnit Jupiter 5.10.2**  
-- **Maven**  
-- **IntelliJ IDEA**
+## How to Run
 
----
+### Prerequisites
+- Java 17+
+- Maven 3.8+
 
-## 📦 Empaquetado y GUI
-<img width="444" height="558" alt="CON" src="https://github.com/user-attachments/assets/ed030014-e421-4a20-bdae-bd013b8f27a8" />  
-<h6>Figura Empaquetado Consola</h6>
+```bash
+git clone https://github.com/NikoAndes/java-advanced-calculator.git
+cd java-advanced-calculator
+mvn clean package
+java -jar target/calculator.jar
+```
 
----
+### Run Tests
+```bash
+mvn test
+```
 
-<img width="583" height="416" alt="image" src="https://github.com/user-attachments/assets/0c7d1ae9-2875-40c4-a774-6251a08ced13" />  
-<h6>Figura GUI</h6>
+## What I Learned
 
----
+- Building desktop GUIs with Java Swing (layout managers, event listeners)
+- Separating UI from business logic (MVC pattern)
+- Unit testing mathematical operations with JUnit 5
+- Maven project setup and JAR packaging
+- Exception handling and input validation strategies
 
-## 📄 UML y Test
-<img width="981" height="846" alt="UML-V2" src="https://github.com/user-attachments/assets/eaacee01-6d56-4804-bb49-e77378eed144" />  
-<h6>Figura UML</h6>
+## Future Improvements
 
----
+- [ ] Add graphing functionality for functions
+- [ ] Implement expression parser for complex input strings
+- [ ] Add dark/light theme toggle
+- [ ] Export history to CSV
+- [ ] Extend scientific functions (hyperbolic, factorial)
 
-<img width="675" height="275" alt="pruebas_junit_calclux" src="https://github.com/user-attachments/assets/b5e05120-8721-4083-adc9-165cc3c1ac1b" />  
-<h6>Figura Test</h6>
+## Author
 
+**Nicolas Isaza Sierra** — [GitHub @NikoAndes](https://github.com/NikoAndes)
 
+Mechatronics engineering student | Java developer | UMNG, Colombia
 
+## License
 
+MIT License — see [LICENSE](LICENSE) for details.
